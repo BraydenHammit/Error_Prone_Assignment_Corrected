@@ -39,11 +39,11 @@ class_stats = {
 }
 
 
-while char_class < 1 and char_class > 3:
+while char_class < 1 or char_class > 3:
     try:
-        char_class = input("Please pick a character class:\n1. Fighter\n2. Wizard\n3. Rogue\n")
-        char_class = int(char_class)
-    except TypeError: 
+        char_class = int(input("Please pick a character class:\n1. Fighter\n2. Wizard\n3. Rogue\n"))
+        
+    except ValueError: 
         print("Invalid Choice\n")
 
 if char_class == 1:
@@ -76,7 +76,7 @@ while True:
             rounds += 1
 
             
-            char_class, monster = combat(monster, char_class)
+            char_class, monster = combat(char_class, monster)
 
             print(f"COMBAT UPDATE -> You: {char_class['health']} HP | Monster: {monster['health']} HP")
 
@@ -97,7 +97,7 @@ while True:
                 )
             print(f"You were victorious! You gain {gold} gold!")
         
-            char_class = char_class["gold"] + gold
+            char_class["gold"] += gold
 
             print(f"TOTAL GOLD: {char_class['gold']}") 
 
