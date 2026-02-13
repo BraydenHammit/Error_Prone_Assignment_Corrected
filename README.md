@@ -12,7 +12,7 @@ Line 10: items = [] -->
 Line 42: and --> or
 Line 100: --> char_class = char_class["gold"] + gold --> char_class["gold"] += gold
 Line 46: TypeError --> ValueError
-Line 44+45: --> char_class = int(input("Please pick a character class:\n1. Fighter\n2. Wizard\n3. Rogue\n"))
+Lines 44, 45: --> char_class = int(input("Please pick a character class:\n1. Fighter\n2. Wizard\n3. Rogue\n"))
 Line 79: (monster, character class) --> (char_class, monster)
 Line _
 Line _
@@ -20,6 +20,6 @@ Line _
 Line _
 --------------------------
 Fixed errors in functions:
-Line 9, 14: - --> -=
-Line _
+Lines 9, 14: - --> -=
+Lines 32, 34, 36: "100", "75", "50" --> 100, 75, 50
 Line _
